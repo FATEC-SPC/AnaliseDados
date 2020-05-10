@@ -8,7 +8,6 @@ async function run() {
     let queryOperation = new Parse.Query(Operation)
 
     await queryOperation.equalTo('id_fnt', 67)
-    //queryOperation.limit(20000)
     //let count = await queryOperation.count()
 
     //console.log(count) //bateu com o valor do aggregate
@@ -20,12 +19,12 @@ async function run() {
         let Fonte = Parse.Object.extend("STG_FNT_ITT")
         let fonteQuery = new Parse.Query(Fonte)
     
-        await fonteQuery.equalTo("ID_STG_FNT_ITT", 67)
+        fonteQuery.equalTo("ID_STG_FNT_ITT", 67)
         let result = await fonteQuery.find()
     
-        await relation.add(result)
+        relation.add(result)
         
-        await object.save()
+        object.save()
     }
 
 }

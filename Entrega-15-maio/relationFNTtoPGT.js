@@ -9,6 +9,7 @@ async function run() {
 
     queryOperation.equalTo('id_fnt', 67)
     queryOperation.limit(20000)
+    
     //let count = await queryOperation.count()
 
     //console.log(count) //bateu com o valor do aggregate

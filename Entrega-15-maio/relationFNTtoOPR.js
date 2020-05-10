@@ -10,6 +10,10 @@ async function run() {
     queryOperation.equalTo('id_fnt', 67)
     queryOperation.limit(1000)
 
+   //let count = await queryOperation.count()
+
+    //console.log(count) //bateu com o valor do aggregate
+
     let results = await queryOperation.find()
     for (let i = 0; i < results.length; i++){
         let object = results[i]
