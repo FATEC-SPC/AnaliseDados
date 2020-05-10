@@ -19,6 +19,7 @@ No que tange às relações, seguem comentários e processos seguidos:
 Neste arquivo, a relação foi feita partindo da classe "STG_FNT_ITT" para a "STG_MVT_CRD".
 
 Descrição das classes:
+
     * STG_FNT_ITT: Stage Fonte 
     * STG_MVT_CRD: Stage Movimentacao
 
@@ -29,6 +30,7 @@ O relacionamento foi feito a partir Identificação da Fonte que enviou os dados
 Neste arquivo, a relação foi feita partindo da classe "STG_FNT_ITT" para a "STG_OPR_ITT".
 
 Descrição das classes:
+
     * STG_FNT_ITT: Stage Fonte
     * STG_OPR_ITT: Stage Operacao
 
@@ -37,6 +39,7 @@ Descrição das classes:
 Neste arquivo, a relação foi feita partindo da classe "STG_FNT_ITT" para a "STG_PGT".
 
 Descrição das classes:
+
     * STG_FNT_ITT: Stage Fonte
     * STG_PGT: Stage Pagamento
 
@@ -72,4 +75,5 @@ db.getCollection("STG_OPR_ITT").aggregate([{
 
 Este exemplo refere-se à consulta realizada na classe referente ao Stage Operação.
 
-Preferimos manter os campos com dados passíveis de relacionamento com o mesmo nome, e, como confirmamos que nas classes relacionadas pelos arquivos acima possuíam um único registro, foi criada um campo temporário chamado "id_fnt", onde replicamos os valoes dos campos originais, para então, criarmos os campos relacionados com os nomes assim fornecidos, por conta disso, há nos três arquivos este código <blockquote>queryOperation.equalTo('id_fnt', 67)</blockquote>.
+
+Preferimos manter os campos com dados passíveis de relacionamento com o mesmo nome, e, como confirmamos que nas classes relacionadas pelos arquivos acima possuíam um único registro, foi criada um campo temporário chamado "id_fnt", onde replicamos os valoes dos campos originais, para então, criarmos os campos relacionados com os nomes assim fornecidos, por conta disso, há nos três arquivos este código "queryOperation.equalTo('id_fnt', 67)".
