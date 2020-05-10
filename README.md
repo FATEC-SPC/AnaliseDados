@@ -6,7 +6,7 @@ Para conexão e visualização do banco e seus relacionamentos, é necessário t
 
 A connection string para conectar ao banco é:
 
-- mongodb://readuser:aQGO17bAVT379Bea9p5uevCA@mongodb.back4app.com:27017/31c414544a5149229dc9f00349627126
+mongodb://readuser:aQGO17bAVT379Bea9p5uevCA@mongodb.back4app.com:27017/31c414544a5149229dc9f00349627126
 
 Por questões de segurança, foi criado um usuário com permissões de leitura, somente.
 
@@ -17,6 +17,7 @@ No que tange às relações, seguem comentários e processos seguidos:
 Neste arquivo, a relação foi feita partindo da classe "STG_FNT_ITT" para a "STG_MVT_CRD".
 
 Descrição das classes:
+
     * STG_FNT_ITT: Stage Fonte 
     * STG_MVT_CRD: Stage Movimentacao
 
@@ -27,6 +28,7 @@ O relacionamento foi feito a partir Identificação da Fonte que enviou os dados
 Neste arquivo, a relação foi feita partindo da classe "STG_FNT_ITT" para a "STG_OPR_ITT".
 
 Descrição das classes:
+
     * STG_FNT_ITT: Stage Fonte
     * STG_OPR_ITT: Stage Operacao
 
@@ -35,6 +37,7 @@ Descrição das classes:
 Neste arquivo, a relação foi feita partindo da classe "STG_FNT_ITT" para a "STG_PGT".
 
 Descrição das classes:
+
     * STG_FNT_ITT: Stage Fonte
     * STG_PGT: Stage Pagamento
 
