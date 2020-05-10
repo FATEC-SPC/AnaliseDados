@@ -1,18 +1,20 @@
 A tecnologia utilizada para o desenvolvimento do banco de dados é MongoDB + NodeJS.
 
-Além desta tecnologia, também utilizamos o Parse Server, um framework openSource que acelera o processo de desenvolvimento do Backend.
+Além desta tecnologia, utilizamos a Back4App, uma plataforma de Backend as a Service que utiliza o Parse Server, uma ferramenta openSource para acelerar o processo de desenvolvimento do Backend.
 
 Para conexão e visualização do banco e seus relacionamentos, é necessário ter instalado o MongoDB instalado no computador.
 
 A connection string para conectar ao banco é:
 
-- mongodb://readuser:aQGO17bAVT379Bea9p5uevCA@mongodb.back4app.com:27017/31c414544a5149229dc9f00349627126
+```
+mongodb://readuser:aQGO17bAVT379Bea9p5uevCA@mongodb.back4app.com:27017/31c414544a5149229dc9f00349627126
+```
 
 Por questões de segurança, foi criado um usuário com permissões de leitura, somente.
 
 No que tange às relações, seguem comentários e processos seguidos:
 
-- Arquivo: "Entrega-15-maio/relationFNTtoMVT.js".
+<b> Arquivo: "Entrega-15-maio/relationFNTtoMVT.js". </b>
 
 Neste arquivo, a relação foi feita partindo da classe "STG_FNT_ITT" para a "STG_MVT_CRD".
 
@@ -22,7 +24,7 @@ Descrição das classes:
 
 O relacionamento foi feito a partir Identificação da Fonte que enviou os dados.
 
-- Arquivo: "Entrega-15-maio/relationFNTtoOPR.js".
+<b> Arquivo: "Entrega-15-maio/relationFNTtoOPR.js". </b>
 
 Neste arquivo, a relação foi feita partindo da classe "STG_FNT_ITT" para a "STG_OPR_ITT".
 
@@ -30,14 +32,13 @@ Descrição das classes:
     * STG_FNT_ITT: Stage Fonte
     * STG_OPR_ITT: Stage Operacao
 
-- Arquivo: "Entrega-15-maio/relationFNTtoPGT.js".
+<b> Arquivo: "Entrega-15-maio/relationFNTtoPGT.js". </b>
 
 Neste arquivo, a relação foi feita partindo da classe "STG_FNT_ITT" para a "STG_PGT".
 
 Descrição das classes:
     * STG_FNT_ITT: Stage Fonte
     * STG_PGT: Stage Pagamento
-
 
 Os relacionamentos trazem uma melhor confiabilidade dos dados e uma melhor performance do banco de dados, além de uma melhor organziação das informações disponíveis.
 
@@ -47,6 +48,7 @@ Também realizamos uma contagem no banco pelos scripts para fins de confirmaçã
 
 Um exemplo de comando executado direto pelo banco está aprentado abaixo.
 
+```
 db.getCollection("STG_OPR_ITT").aggregate([{
 	$group: {
 		_id: {
@@ -66,7 +68,8 @@ db.getCollection("STG_OPR_ITT").aggregate([{
 		}
 	}
 }]);
+```
 
 Este exemplo refere-se à consulta realizada na classe referente ao Stage Operação.
 
-Preferimos manter os campos com dados passíveis de relacionamento com o mesmo nome, e, como confirmamos que nas classes relacionadas pelos arquivos acima possuíam um único registro, foi criada um campo temporário chamado "id_fnt", onde replicamos os valoes dos campos originais, para então, criarmos os campos relacionados com os nomes assim fornecidos, por conta disso, há nos três arquivos este código "queryOperation.equalTo('id_fnt', 67)".
+Preferimos manter os campos com dados passíveis de relacionamento com o mesmo nome, e, como confirmamos que nas classes relacionadas pelos arquivos acima possuíam um único registro, foi criada um campo temporário chamado "id_fnt", onde replicamos os valoes dos campos originais, para então, criarmos os campos relacionados com os nomes assim fornecidos, por conta disso, há nos três arquivos este código <blockquote>queryOperation.equalTo('id_fnt', 67)</blockquote>.
