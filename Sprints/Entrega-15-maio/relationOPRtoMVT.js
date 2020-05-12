@@ -22,8 +22,7 @@ async function run() {
 
     }
 }
-]
-*/
+
 //Operação para criação das relations entre STG_MVT_CRD e STG_PGT
 async function run() {
     let Operation = Parse.Object.extend("STG_MVT_CRD")
@@ -35,7 +34,7 @@ async function run() {
     
     for (let i = 0; i < results.length; i++){
         let object = results[i]
-        let relation = object.relation("QTD_CLI_CAD_POS4444")
+        let relation = object.relation("QTD_CLI_CAD_POS")
         let Operacao = Parse.Object.extend("STG_PGT")
         let operacaoQuery = new Parse.Query(Operacao)
 
@@ -49,15 +48,58 @@ async function run() {
                 console.log(result)
             }
         }
-        
-
-        //console.log("result aqui cara: " + JSON.stringify(result))
-        
-        //relation.add(result)
-        //object.save()
-        //console.log(JSON.stringify(object))
     }
 
 }
+
+*/
+
+async function run() {
+    let Opr = Parse.Object.extend("STG_MVT_CRD")
+    let queryOpr = new Parse.Query(Opr)
+
+    queryOpr.limit(20000)
+
+    queryOpr.exists('DES_TIP_PSS')
+    
+    let results = await queryOpr.find()
+    for (let i =0; i < results.length; i++ ){
+        let object = results[i]
+        object.set("tip_pss", object.get("DES_TIP_PSS"))
+        await object.save()
+        console.log(object)
+
+    }
+}
+
+/*
+//Operação para criação das relations entre STG_MVT_CRD e STG_PGT
+async function run() {
+    let Operation = Parse.Object.extend("STG_MVT_CRD")
+    let queryOperation = new Parse.Query(Operation)
+
+    queryOperation.limit(20000)
+    queryOperation.exists("cli_pos")
+    let results = await queryOperation.find()
+    
+    for (let i = 0; i < results.length; i++){
+        let object = results[i]
+        let relation = object.relation("QTD_CLI_CAD_POS")
+        let Operacao = Parse.Object.extend("STG_PGT")
+        let operacaoQuery = new Parse.Query(Operacao)
+
+        operacaoQuery.equalTo("cli_pos", object.get("cli_pos"))       
+
+        let result = await operacaoQuery.find()
+        for (let j = 0; j < result.length; j++){
+            if (result){
+                relation.add(result)
+                object.save()
+                console.log(result)
+            }
+        }
+    }
+
+}*/
 
 run()
