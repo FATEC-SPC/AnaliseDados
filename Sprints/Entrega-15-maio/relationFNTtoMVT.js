@@ -21,7 +21,7 @@ async function run() {
     
         fonteQuery.equalTo("ID_STG_FNT_ITT", 67)
         let result = await fonteQuery.find()
-    
+        
         relation.add(result)
         
         object.save()

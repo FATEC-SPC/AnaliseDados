@@ -4,7 +4,7 @@ Parse.initialize('a9pZ8Txk8zBJgGxg63DhXzUn5raHKHa2WjYi0Fh8', 'VCxS0OoyLyCsahzui1
 Parse.serverURL = 'https://parseapi.back4app.com'
 
 //Operação para copiar os dados da coluna "COD_MDL" para "id_mdl"
-
+/*
 async function run() {
     let Opr = Parse.Object.extend("STG_PGT")
     let queryOpr = new Parse.Query(Opr)
@@ -20,7 +20,7 @@ async function run() {
         await object.save()
 
     }
-}
+}*/
 
 //Operação para criação das relations entre STG_MDL e STG_PGT
 async function run() {
@@ -38,10 +38,13 @@ async function run() {
     
         modalidadeQuery.equalTo("COD_MDL", object.get("id_mdl"))
         let result = await modalidadeQuery.find()
-    
-        relation.add(result)
-        
-        object.save()
+        for (let j = 0; j < result.length; j++){
+            if (result){
+                relation.add(result)
+                object.save()
+                console.log(result)
+            }
+        }
     }
 
 }
