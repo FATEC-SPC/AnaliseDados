@@ -1,6 +1,6 @@
 const Parse = require ('parse/node')
 
-Parse.initialize('a9pZ8Txk8zBJgGxg63DhXzUn5raHKHa2WjYi0Fh8', 'VCxS0OoyLyCsahzui1p9Zrm53xyq0r91DEMpqeQK')
+Parse.initialize('<appID>', '<javascriptKey>') //App Credentials
 Parse.serverURL = 'https://parseapi.back4app.com'
 
 async function run() {
