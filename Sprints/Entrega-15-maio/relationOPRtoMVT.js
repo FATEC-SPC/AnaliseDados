@@ -4,8 +4,8 @@ const Parse = require ('parse/node')
 Parse.initialize('<appID>', '<javascriptKey>') //Credenciais do Parse App
 Parse.serverURL = 'https://parseapi.back4app.com' //API URL
 
-//Operação para copiar os dados da coluna "QTD_CLI_CAD_POS" para "cli_pos"
 
+//Operação para copiar os dados da coluna "QTD_CLI_CAD_POS" para "cli_pos"
 async function run() {
     let Opr = Parse.Object.extend("STG_MVT_CRD")
     let queryOpr = new Parse.Query(Opr)
