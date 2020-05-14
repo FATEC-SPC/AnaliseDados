@@ -3,8 +3,9 @@
 <a href= "https://github.com/euclas">Euclides Rezende</a></br>
 <a href= "https://github.com/RenanVitor">Renan Vitor</a></br>
 <a href= "https://github.com/wrshub">William Rodrigues</a></br>
-
-
+</br>
+</br>
+</br>
 A tecnologia utilizada para o desenvolvimento do banco de dados é MongoDB + NodeJS.
 
 Além desta tecnologia, utilizamos a <a href="https://www.back4app.com/">Back4App</a>, uma plataforma de Backend as a Service que utiliza o Parse Server, uma ferramenta openSource para acelerar o processo de desenvolvimento do Backend.
