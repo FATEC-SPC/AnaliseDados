@@ -1,8 +1,11 @@
 const Parse = require ('parse/node')
 
-Parse.initialize('a9pZ8Txk8zBJgGxg63DhXzUn5raHKHa2WjYi0Fh8', 'VCxS0OoyLyCsahzui1p9Zrm53xyq0r91DEMpqeQK')
-Parse.serverURL = 'https://parseapi.back4app.com'
-/*
+//Inicialização do Parse
+Parse.initialize('<appID>', '<javascriptKey>') //Credenciais do Parse App
+Parse.serverURL = 'https://parseapi.back4app.com' //API URL
+
+
+
 //Operação para copiar os dados da coluna "ID_FNT_ITT" para "id_fnt"
 async function run() {
     let Opr = Parse.Object.extend("STG_PGT")
@@ -17,11 +20,11 @@ async function run() {
         let object = results[i]
         object.set("id_fnt", object.get("ID_FNT_ITT"))
         await object.save()
+        console.log(JSON.stringify(object))
 
     }
 }
 
-*/
 
 //Operação para criação das relations entre STG_PGT e STG_FNT_ITT
 
@@ -45,7 +48,7 @@ async function run() {
             if (result){
                 relation.add(result)
                 object.save()
-                console.log(result)
+                console.log(JSON.stringify(result))
             }
         }
     }
