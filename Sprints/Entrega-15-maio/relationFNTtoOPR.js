@@ -1,7 +1,9 @@
 const Parse = require ('parse/node')
 
-Parse.initialize('<appID>', '<javascriptKey>') //App Credentials
-Parse.serverURL = 'https://parseapi.back4app.com'
+//Inicialização do Parse
+Parse.initialize('<appID>', '<javascriptKey>') //Credenciais do Parse App
+Parse.serverURL = 'https://parseapi.back4app.com' //API URL
+
 
 async function run() {
     let Operation = Parse.Object.extend("STG_OPR_ITT")
@@ -27,6 +29,8 @@ async function run() {
         relation.add(result)
         
         await object.save()
+        console.log(JSON.stringify(object))
+
     }
 
 }
