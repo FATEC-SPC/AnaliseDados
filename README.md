@@ -1,10 +1,3 @@
-<h2>Mantenedores</h2>
-<a href= "https://github.com/charles-ramos">Charles Ramos</a></br>
-<a href= "https://github.com/euclas">Euclides Rezende</a></br>
-<a href= "https://github.com/RenanVitor">Renan Vitor</a></br>
-<a href= "https://github.com/wrshub">William Rodrigues</a></br>
-</br>
-
 <h2>DESCRIÇÃO DO PROJETO E SUAS TECNOLOGIAS</h2>
 
 A tecnologia utilizada para o desenvolvimento do banco de dados é MongoDB + NodeJS.
@@ -22,3 +15,10 @@ mongodb://readuser:aQGO17bAVT379Bea9p5uevCA@mongodb.back4app.com:27017/31c414544
 ```
 
 Por questões de segurança, foi criado um usuário com permissões de leitura, somente.
+
+<h2>Mantenedores</h2>
+<a href= "https://github.com/charles-ramos">Charles Ramos</a></br>
+<a href= "https://github.com/euclas">Euclides Rezende</a></br>
+<a href= "https://github.com/RenanVitor">Renan Vitor</a></br>
+<a href= "https://github.com/wrshub">William Rodrigues</a></br>
+</br>
