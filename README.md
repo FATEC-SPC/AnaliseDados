@@ -1,8 +1,8 @@
 <h2>Mantenedores</h2>
-<a href= "https://github.com/charles-ramos">Charles Ramos</a>
-<a href= "https://github.com/euclas">Euclides Rezende</a>
-<a href= "https://github.com/RenanVitor">Renan Vitor</a>
-<a href= "https://github.com/wrshub">William Rodrigues</a>
+<a href= "https://github.com/charles-ramos">Charles Ramos</a></br>
+<a href= "https://github.com/euclas">Euclides Rezende</a></br>
+<a href= "https://github.com/RenanVitor">Renan Vitor</a></br>
+<a href= "https://github.com/wrshub">William Rodrigues</a></br>
 
 
 A tecnologia utilizada para o desenvolvimento do banco de dados é MongoDB + NodeJS.
