@@ -20,5 +20,4 @@ Por questões de segurança, foi criado um usuário com permissões de leitura, 
 <a href= "https://github.com/charles-ramos">Charles Ramos</a></br>
 <a href= "https://github.com/euclas">Euclides Rezende</a></br>
 <a href= "https://github.com/RenanVitor">Renan Vitor</a></br>
-<a href= "https://github.com/wrshub">William Rodrigues</a></br>
 </br>
