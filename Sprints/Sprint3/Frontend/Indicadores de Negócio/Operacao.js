@@ -32,8 +32,14 @@ async function run() {
         if (object.get("QTD_OPR")){          
             sumOpr += Number.parseFloat(JSON.stringify(object.get("QTD_OPR")))
         }
+
+        console.log("Valor Contratado por Remessa: R$ " + Number.parseFloat(JSON.stringify(object.get("VLR_CTRD_CSC")/100)) +
+        "\tQuantidade de Parcelas: " + JSON.stringify(object.get("QTD_PCL")) +
+        "\tValor Total Saldo Devedor R$: " + Number.parseFloat(JSON.stringify(object.get("VLR_SDO_DDR")/100)) +
+        "\tQuantidade de Operações: " + JSON.stringify(object.get("QTD_OPR")))
+
     }
-    
+
     console.log("Valor Total Contratado por Remessa R$: " + sumTot.toFixed(2))
     console.log("Quantidade de Parcelas por remessa: " + sumPcl + " parcelas")
     console.log("Valor Total Saldo Devedor R$: " + sumSDO.toFixed(2))
